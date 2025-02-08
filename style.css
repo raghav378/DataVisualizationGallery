@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+input{
+    display: none;
+}
+.container{
+    width: 100%;
+    text-align: center;
+}
+h1{
+    font-weight: normal;
+    font-size: 50px;
+    position: relative;
+    margin: 30px 0;
+    color: black;
+}
+
+h1:hover{color: blue;}
+
+.top content{
+    background-color: antiquewhite;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgrey;
+}
+h3{
+    font-size: 20px;
+    height: 100%;
+    background-color: rgb(249, 211, 24);
+    line-height: 60%;
+    padding: 5px 50px;
+    color: rgb(45, 67, 191);
+}
+
+label{
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 30px;
+    color: rgb(117, 117, 117);
+    cursor: pointer;
+    transition: .5s;
+    padding: 0 105px;
+}
+label:hover{
+    color: black;
+}
+
+.intro{
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    width:50%;
+    padding:30px;
+    font-size:30px;
+    margin: auto;
+    background-color:white;
+
+}
+
+.define{
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    width:50%;
+    padding:30px;
+    font-size:30px;
+    margin: auto;
+    background-color:white;
+}
+.DV-gallary{
+    padding: 30px ;
+    margin:  50px;
+    background-color: rgb(255, 252, 218);
+}
+
+
+.DATAVISUALIZATION{
+
+    
+    /* width: 20%;
+    height: 20%; */
+    /* position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightgray; */
+    cursor: pointer;
+    margin: 50px;
+    border-radius: 10px;
+    
+
+}
+.DATAVISUALIZATION img{
+    
+    /* width: 30%;
+    height: 30%; */
+    border-radius: 10px;
+    margin: 20px;
+    
+}
+
+
+
+/* .DATAVISUALIZATION img:hover{
+   
+
+} */
+/* .welcome{
+    font-size: 50px;
+    margin: 150px 50px;
+    padding: 70px;
+    background-color: rgb(250, 231, 121);
+} */
+.about{
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    width:50%;
+    padding:30px;
+    font-size:30px;
+    margin: auto;
+    background-color:rgb(252, 247, 227);
+    /* font-size: 40px;
+    background-color: rgb(246, 215, 130);
+    padding: 20px;
+    margin: 20px; */
+}
+
+#check1:checked ~ .container .welcome,
+#check1:checked ~ .container .DV-gallary{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+
+#check1:checked ~ .container .about{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute
+}
+#check2:checked ~ .container .DV-gallary{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+#check2:checked ~ .container .welcome,
+#check2:checked ~ .container .about{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute
+}
+#check3:checked ~ .container .about{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+#check3:checked ~ .container .welcome,
+#check3:checked ~ .container .DV-gallary{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute
+}
+#check1:checked ~ .container .define{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+#check2:checked ~ .container .define,
+#check3:checked ~ .container .define{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute
+}
