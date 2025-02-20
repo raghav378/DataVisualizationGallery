@@ -14,9 +14,12 @@ input{
     text-align: center;
     
 }
+
+
+
 h1{
     font-weight: normal;
-    font-size: 50px;
+    font-size: 40px;
     position: relative;
     margin: 30px 0;
     color: black;
@@ -24,15 +27,12 @@ h1{
 
 h1:hover{color: blue;}
 
-h3{
-    font-size: 20px;
-    height: 100%;
-    background-color: rgb(249, 211, 24);
-    line-height: 60%;
-    padding: 5px 50px;
-    color: rgb(45, 67, 191);
-}
 
+
+.image{
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+}
 
 
 /* .maincontent{
@@ -46,13 +46,36 @@ h3{
     background-color:white;
 } */
 
+.yellowline{
+    background-color:rgb(249, 211, 24) ;
+    height: 15px;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 18px;
+    text-align: center;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+  th {
+    background-color: #f4f4f4;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
 p{
     text-align: left;
     display: flex;
-    justify-content: center;
+    
     width:60%;
     padding:30px;
-    font-size:30px;
+    font-size:20px;
     margin: auto;
     background-color:white;
 
@@ -63,7 +86,7 @@ p{
     text-align: left;
     width:60%;
     padding:30px;
-    font-size:50px;
+    font-size:40px;
     margin: auto;
     background-color:white;
 }

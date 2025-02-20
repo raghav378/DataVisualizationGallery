@@ -15,13 +15,18 @@ input{
 }
 h1{
     font-weight: normal;
-    font-size: 50px;
+    font-size: 30px;
     position: relative;
     margin: 30px 0;
     color: black;
 }
 
 h1:hover{color: blue;}
+
+.yellowline{
+    background-color:rgb(249, 211, 24) ;
+    height: 15px;
+}
 
 .top content{
     background-color: antiquewhite;
@@ -33,21 +38,14 @@ h1:hover{color: blue;}
     border-radius: 5px;
     box-shadow: 3px 3px 5px lightgrey;
 }
-h3{
-    font-size: 20px;
-    height: 100%;
-    background-color: rgb(249, 211, 24);
-    line-height: 60%;
-    padding: 5px 50px;
-    color: rgb(45, 67, 191);
-}
+
 
 label{
     display: inline-block;
     height: 100%;
     margin: 0 20px;
     line-height: 60px;
-    font-size: 30px;
+    font-size: 20px;
     color: rgb(117, 117, 117);
     cursor: pointer;
     transition: .5s;
@@ -63,11 +61,17 @@ label:hover{
     justify-content: center;
     width:50%;
     padding:30px;
-    font-size:30px;
+    font-size:20px;
     margin: auto;
     background-color:white;
 
 }
+
+.line {
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: 20px 80px;
+  }
 
 .define{
     text-align: left;
@@ -75,39 +79,82 @@ label:hover{
     justify-content: center;
     width:50%;
     padding:30px;
-    font-size:30px;
+    font-size:20px;
     margin: auto;
     background-color:white;
 }
-.DV-gallary{
+
+/* .types{
+    text-align: left;
+    
+    width:50%;
+    padding:30px;
+    font-size:20px;
+    margin: auto;
+    background-color:white;
+} */
+
+
+/* .DV-gallary1{
+    display: flex;
+    justify-content: left;
     padding: 30px ;
     margin:  50px;
-    background-color: rgb(255, 252, 218);
+    background-color: rgb(251, 249, 231);
 }
 
+.DV-gallary2{
+    display: flex;
+    justify-content: left;
+    padding: 30px ;
+    margin:  50px;
+    background-color: rgb(251, 249, 231);
+} */
 
-.DATAVISUALIZATION{
+/* .DATAVISUALIZATION{
 
     
-    /* width: 20%;
-    height: 20%; */
-    /* position: relative;
+    width: 20%;
+    height: 20%;
+    position: relative;
     height: 230px;
     border-radius: 10px;
-    box-shadow: 3px 3px 5px lightgray; */
+    box-shadow: 3px 3px 5px lightgray;
     cursor: pointer;
     margin: 50px;
     border-radius: 10px;
     
 
-}
-.DATAVISUALIZATION img{
+} */
+/* .DATAVISUALIZATION img{
     
-    /* width: 30%;
-    height: 30%; */
+    width: 30%;
+    height: 30%;
     border-radius: 10px;
     margin: 20px;
     
+} */
+
+.image-grid {
+    font-size: 20px;
+    justify-self: center;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
+}
+
+.image-grid img {
+    width: 70%;
+    height: 200px;
+    border-radius: 8px;
+    border: 2px solid #000000; 
+}
+
+.subcontainer{
+    margin: 30px;
+    font-size: 40px;
 }
 
 
@@ -124,11 +171,10 @@ label:hover{
 } */
 .about{
     text-align: left;
-    display: flex;
-    justify-content: center;
+    
     width:50%;
     padding:30px;
-    font-size:30px;
+    font-size:20px;
     margin: auto;
     background-color:rgb(252, 247, 227);
     /* font-size: 40px;
@@ -138,7 +184,7 @@ label:hover{
 }
 
 #check1:checked ~ .container .welcome,
-#check1:checked ~ .container .DV-gallary{
+#check1:checked ~ .container .subcontainer{
     opacity: 1;
     transform: scale(1);
     position: relative;
@@ -149,7 +195,7 @@ label:hover{
     transform: scale(0);
     position: absolute
 }
-#check2:checked ~ .container .DV-gallary{
+#check2:checked ~ .container .subcontainer{
     opacity: 1;
     transform: scale(1);
     position: relative;
@@ -166,7 +212,7 @@ label:hover{
     position: relative;
 }
 #check3:checked ~ .container .welcome,
-#check3:checked ~ .container .DV-gallary{
+#check3:checked ~ .container .subcontainer{
     opacity: 0;
     transform: scale(0);
     position: absolute
@@ -178,6 +224,32 @@ label:hover{
 }
 #check2:checked ~ .container .define,
 #check3:checked ~ .container .define{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute
+}
+
+#check1:checked ~ .container .intro{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
+#check2:checked ~ .container .intro,
+#check3:checked ~ .container .intro{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute
+}
+
+
+#check1:checked ~ .container .types{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+
+}
+#check2:checked ~ .container .types,
+#check3:checked ~ .container .types{
     opacity: 0;
     transform: scale(0);
     position: absolute
