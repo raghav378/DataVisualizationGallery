@@ -1,186 +1,150 @@
-*{
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-
-input{
+input {
     display: none;
 }
-.container{
+
+.container {
     width: 100%;
     text-align: center;
 }
-h1{
+
+h1 {
     font-weight: normal;
-    font-size: 30px;
+    font-size: 2rem; /* Scalable font size */
     position: relative;
-    margin: 30px 0;
+    margin: 2rem 0;
     color: black;
 }
 
-h1:hover{color: blue;}
-
-.yellowline{
-    background-color:rgb(249, 211, 24) ;
-    height: 15px;
+h1:hover {
+    color: blue;
 }
 
-.top content{
+.yellowline {
+    background-color: rgb(249, 211, 24);
+    height: 0.8rem;
+}
+
+.top-content {
     background-color: antiquewhite;
     width: 90%;
-    margin: 0 auto 20px auto;
-    height: 60px;
+    margin: 0 auto 1.25rem auto;
+    height: 3.75rem;
     display: flex;
     align-items: center;
-    border-radius: 5px;
-    box-shadow: 3px 3px 5px lightgrey;
+    justify-content: center;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem 0.3rem lightgrey;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    overflow: hidden;
+    white-space: nowrap; /* Ensures content stays in one line */
 }
 
-
-label{
+label {
     display: inline-block;
     height: 100%;
-    margin: 0 20px;
-    line-height: 60px;
-    font-size: 20px;
+    margin: 0 1rem;
+    line-height: 3.75rem;
+    font-size: 1.25rem;
     color: rgb(117, 117, 117);
     cursor: pointer;
-    transition: .5s;
-    padding: 0 105px;
+    transition: 0.5s;
+    padding: 0 1rem;
+    white-space: nowrap; /* Prevents wrapping */
 }
-label:hover{
+
+label:hover {
     color: black;
 }
 
-.intro{
-    text-align: left;
+.intro, .define, .about {
+    text-align: justify;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    width:50%;
-    padding:30px;
-    font-size:20px;
+    width: 60%;
+    padding: 2rem;
+    font-size: 1.25rem;
     margin: auto;
-    background-color:white;
+    background-color: white;
+}
 
+.about h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1.1rem;
 }
 
 .line {
-    height: 2px;
+    height: 0.125rem;
     background-color: rgb(255, 255, 255);
-    margin: 20px 80px;
-  }
-
-.define{
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    width:50%;
-    padding:30px;
-    font-size:20px;
-    margin: auto;
-    background-color:white;
+    margin: 1.25rem 5rem;
 }
-
-/* .types{
-    text-align: left;
-    
-    width:50%;
-    padding:30px;
-    font-size:20px;
-    margin: auto;
-    background-color:white;
-} */
-
-
-/* .DV-gallary1{
-    display: flex;
-    justify-content: left;
-    padding: 30px ;
-    margin:  50px;
-    background-color: rgb(251, 249, 231);
-}
-
-.DV-gallary2{
-    display: flex;
-    justify-content: left;
-    padding: 30px ;
-    margin:  50px;
-    background-color: rgb(251, 249, 231);
-} */
-
-/* .DATAVISUALIZATION{
-
-    
-    width: 20%;
-    height: 20%;
-    position: relative;
-    height: 230px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 5px lightgray;
-    cursor: pointer;
-    margin: 50px;
-    border-radius: 10px;
-    
-
-} */
-/* .DATAVISUALIZATION img{
-    
-    width: 30%;
-    height: 30%;
-    border-radius: 10px;
-    margin: 20px;
-    
-} */
 
 .image-grid {
-    font-size: 20px;
+    font-size: 1.25rem;
     justify-self: center;
     width: 90%;
     background-color: rgb(255, 255, 255);
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 10px; 
+    grid-template-columns: repeat(4, 1fr); /* Always 4 columns */
+    gap: 0.6rem;
 }
 
 .image-grid img {
-    width: 70%;
-    height: 200px;
-    border-radius: 8px;
-    border: 2px solid #000000; 
+    width: 90%; /* Decreased overall size */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 200px; /* Reduced max height */
+    object-fit: contain; /* Ensures the whole image is visible */
+    border-radius: 0.5rem;
+    border: 0.125rem solid #000000;
+    padding: 0.5rem; /* Added padding */
 }
 
-.subcontainer{
-    margin: 30px;
-    font-size: 40px;
+.subcontainer {
+    margin: 2rem;
+    font-size: 2.5rem;
 }
 
-
-
-/* .DATAVISUALIZATION img:hover{
-   
-
-} */
-/* .welcome{
-    font-size: 50px;
-    margin: 150px 50px;
-    padding: 70px;
-    background-color: rgb(250, 231, 121);
-} */
-.about{
-    text-align: left;
+@media (max-width: 768px) {
+    .intro, .define, .about {
+        width: 90%;
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
     
-    width:50%;
-    padding:30px;
-    font-size:20px;
-    margin: auto;
-    background-color:rgb(252, 247, 227);
-    /* font-size: 40px;
-    background-color: rgb(246, 215, 130);
-    padding: 20px;
-    margin: 20px; */
+    label {
+        padding: 0 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .top-content {
+        width: 100%;
+        overflow-x: auto; /* Allow horizontal scroll if necessary */
+        justify-content: flex-start;
+        padding: 0 1rem;
+        display: flex;
+        flex-wrap: nowrap; /* Ensure labels stay in one line */
+        white-space: nowrap;
+    }
+    
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive for smaller screens */
+    }
 }
 
 #check1:checked ~ .container .welcome,
@@ -193,7 +157,7 @@ label:hover{
 #check1:checked ~ .container .about{
     opacity: 0;
     transform: scale(0);
-    position: absolute
+    position: absolute;
 }
 #check2:checked ~ .container .subcontainer{
     opacity: 1;
@@ -204,7 +168,7 @@ label:hover{
 #check2:checked ~ .container .about{
     opacity: 0;
     transform: scale(0);
-    position: absolute
+    position: absolute;
 }
 #check3:checked ~ .container .about{
     opacity: 1;
@@ -215,7 +179,7 @@ label:hover{
 #check3:checked ~ .container .subcontainer{
     opacity: 0;
     transform: scale(0);
-    position: absolute
+    position: absolute;
 }
 #check1:checked ~ .container .define{
     opacity: 1;
@@ -226,7 +190,7 @@ label:hover{
 #check3:checked ~ .container .define{
     opacity: 0;
     transform: scale(0);
-    position: absolute
+    position: absolute;
 }
 
 #check1:checked ~ .container .intro{
@@ -238,19 +202,17 @@ label:hover{
 #check3:checked ~ .container .intro{
     opacity: 0;
     transform: scale(0);
-    position: absolute
+    position: absolute;
 }
-
 
 #check1:checked ~ .container .types{
     opacity: 1;
     transform: scale(1);
     position: relative;
-
 }
 #check2:checked ~ .container .types,
 #check3:checked ~ .container .types{
     opacity: 0;
     transform: scale(0);
-    position: absolute
+    position: absolute;
 }
